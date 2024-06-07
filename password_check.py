@@ -19,7 +19,7 @@ def hint_password(password):
     elif "farewill" in password.lower():
         print("Invalid password. Password cannot contain 'Farewill'.")
         exit()
-    elif "downham" in password.lower()
+    elif "downham" in password.lower():
         print("Invalid password. Password cannot contain 'Downham'.")
         exit()
     elif "password" in password.lower():
