@@ -15,7 +15,7 @@ This Python script checks the validity of a username and password based on speci
 5. **Follow the prompts to enter a username and password.**
    
 ## Criteria for Username
-The username must be at least 6 characters long.
+- The username must be at least 6 characters long.
 
 ## Criteria for Password
 - The password must be between 9 and 15 characters long.
