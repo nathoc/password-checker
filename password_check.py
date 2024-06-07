@@ -46,3 +46,5 @@ continue_now = input("Do you want to exit? Hit enter. ")
 print("Thanks for using the Password Checker tool. ")
 
 # test 23
+
+# testing
