@@ -11,7 +11,7 @@ This Python script checks the validity of a username and password based on speci
 1. **Clone or download this repository.**
 2. **Open a terminal or command prompt.**
 3. **Navigate to the directory where the script is located.**
-4. **Run the script using the following command:**
+4. **Run the script.**
 5. **Follow the prompts to enter a username and password.**
    
 ## Criteria for Username
