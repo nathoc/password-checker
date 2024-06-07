@@ -11,37 +11,34 @@ username(username_input)
 password_input = input("Enter a password: ")
 def hint_password(password):
     if len(password) < 9:
-            print("Invalid password. Password must be more than 8 characters")
+            print("My nan could hack this password. Password must be more than 8 characters. Try another! ")
             exit()
-    elif len(password) > 15:
-          print("Invalid password. Password must be less than 15 characters")
+    elif len(password) > 20:
+          print("Oh come on, now you're just showing off. Passwords must be less than 20 characters. Try again! ")
           exit()
     elif "farewill" in password.lower():
-        print("Invalid password. Password cannot contain 'Farewill'.")
+        print("Oh yeah this is a great one, nobody will guess that. NOT. Try again! ")
         exit()
     elif "downham" in password.lower():
-        print("Invalid password. Password cannot contain 'Downham'.")
+        print("A great password! If you want to get hacked that is. Try again! ")
         exit()
     elif "password" in password.lower():
-        print("Invalid password. Password cannot contain 'Password'.")
-        exit()
-    elif "will" in password.lower():
-        print("Invalid password. Password cannot contain 'Will'.")
+        print("You're trying to wind me up? Right? TRY AGAIN!! ")
         exit()
     elif "funeral" in password.lower():
-        print("Invalid password. Password cannot contain 'Funeral'.")
+        print("Too easy! Try again!")
         exit()
     elif "probate" in password.lower():
-        print("Invalid password. Password cannot contain 'Probate'.")
+        print("Come on now, you know that was a bad idea! Try again!")
         exit()
     elif "cremation" in password.lower():
-        print("Invalid password. Password cannot contain 'Cremation'.")
+        print("If you were a hacker I bet this is one of the first things you'd try. (Rick Ross) Another one! ")
         exit()
     elif (username_input) in password.lower():
-         print("Invalid password. Password cannot contain username.")
+         print("Oh come on, you didn't seriously think that was a good password did you? ")
          exit()
     else:
-          print("The username and password you entered meet security criteria. Nice! ")
+          print("Success! The username and password you entered meet security criteria. Gold star for you! ")
 hint_password(password_input)
 
 # ending with question to exit 
@@ -53,5 +50,5 @@ if user_input == ("no"):
     print("Well, why are you still here?")
     exit()
 else:
-     print("I don't know what you need! ")
+     print("You didn't listen! I said enter yes or no! See ya! ")
      exit()
