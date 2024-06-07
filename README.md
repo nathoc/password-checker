@@ -33,3 +33,5 @@ This Python script checks the validity of a username and password based on speci
 - The script will exit if any of the criteria are not met.
 
 This README file provides a clear overview of the script, its requirements, usage instructions, criteria for username and password, and an example of how to run the script.
+
+Nathan :-) 
