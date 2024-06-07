@@ -37,10 +37,21 @@ def hint_password(password):
     elif "cremation" in password.lower():
         print("Invalid password. Password cannot contain 'Cremation'.")
         exit()
+    elif (username_input) in password.lower():
+         print("Invalid password. Password cannot contain username.")
+         exit()
     else:
-          print("The username and password you entered meets all of the arguments,yay! ")
+          print("The username and password you entered meet security criteria. Nice! ")
 hint_password(password_input)
 
 # ending with question to exit 
-continue_now = input("Do you want to exit? Hit enter. ")
-print("Thanks for using the Password Checker tool. ")
+user_input = input("Do you want to exit the programme? Enter 'yes' or 'no'. ")
+if user_input == ("yes"):
+    print("Okay, bye!")
+    exit()
+if user_input == ("no"):
+    print("Well, why are you still here?")
+    exit()
+else:
+     print("I don't know what you need! ")
+     exit()
