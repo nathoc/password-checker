@@ -47,4 +47,4 @@ print("Thanks for using the Password Checker tool. ")
 
 # test 23
 
-# testing
+# testing 10
