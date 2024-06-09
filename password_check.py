@@ -11,7 +11,7 @@ username(username_input)
 password_input = input("Enter a password: ")
 def hint_password(password):
     if len(password) < 9:
-            print("My nan could hack this password. Password must be more than 8 characters. Try another! ")
+            print("A baby could hack this password. Password must be more than 8 characters. Try another! ")
             exit()
     elif len(password) > 20:
           print("Oh come on, now you're just showing off. Passwords must be less than 20 characters. Try again! ")
