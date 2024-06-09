@@ -51,6 +51,4 @@ if user_input == ("no"):
     exit()
 else:
      print("You didn't listen! I said enter yes or no! See ya! ")
-     exit()
-
-# test comment     
+     exit()  
