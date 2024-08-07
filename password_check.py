@@ -1,3 +1,5 @@
+import re
+
 def username(name):
     if len(name) <6 :
        print("Invalid username. Must be 6 characters or more. ")
@@ -8,47 +10,37 @@ username_input = input("Enter a username: ")
 username(username_input)
 
 # password requirements
-password_input = input("Enter a password: ")
-def hint_password(password):
+def hint_password(password, username):
+    special_characters = re.compile('[^a-zA-Z0-9]')
     if len(password) < 9:
-            print("A baby could hack this password. Password must be more than 8 characters. Try another! ")
-            exit()
+        print("Password must be more than 8 characters. Try another!")
+        exit()
     elif len(password) > 20:
-          print("Oh come on, now you're just showing off. Passwords must be less than 20 characters. Try again! ")
-          exit()
-    elif "farewill" in password.lower():
-        print("Oh yeah this is a great one, nobody will guess that. NOT. Try again! ")
+        print("Passwords must be less than 20 characters. Try again!")
         exit()
-    elif "downham" in password.lower():
-        print("A great password! If you want to get hacked that is. Try again! ")
+    elif any(word in password.lower() for word in ["farewill", "downham", "password", "funeral", "probate", "cremation", "job"]):
+        print("You shouldn't include anything specific to Farewill in your password as it makes it easier to guess. Try again!")
         exit()
-    elif "password" in password.lower():
-        print("You're trying to wind me up? Right? TRY AGAIN!! ")
+    elif username.lower() in password.lower():
+        print("Your password can't contain your username! Try again!")
         exit()
-    elif "funeral" in password.lower():
-        print("Too easy! Try again!")
+    elif not any(char.isdigit() for char in password):
+        print("Password must include at least one number. Try again!")
         exit()
-    elif "probate" in password.lower():
-        print("Come on now, you know that was a bad idea! Try again!")
+    elif not any(char.isupper() for char in password):
+        print("Password must include at least one capital letter. Try again!")
         exit()
-    elif "cremation" in password.lower():
-        print("If you were a hacker I bet this is one of the first things you'd try. (Rick Ross) Another one! ")
+    elif not special_characters.search(password):
+        print("Password must include at least one special character. Try again!")
         exit()
-    elif (username_input) in password.lower():
-         print("Oh come on, you didn't seriously think that was a good password did you? ")
-         exit()
     else:
-          print("Success! The username and password you entered meet security criteria. Gold star for you! ")
-hint_password(password_input)
+        print("Success! The username and password you entered meet security criteria.")
+
+password_input = input("Enter a password: ")
+hint_password(password_input, username_input)
 
 # ending with question to exit 
-user_input = input("Do you want to exit the programme? Enter 'yes' or 'no'. ")
-if user_input == ("yes"):
-    print("Okay, bye!")
+user_input = input("Do you want to exit the programme? Hit enter. ")
+if user_input == (""):
+    print("Thanks for using the Password Tester Tool. Let us know your feedback!" )
     exit()
-if user_input == ("no"):
-    print("Well, why are you still here?")
-    exit()
-else:
-     print("You didn't listen! I said enter yes or no! See ya! ")
-     exit()  
